@@ -20,7 +20,18 @@
       {
         "language": "javascript",
         "path": "./snippets/snippets.json"
+      },
+      {
+        "language": "javascriptreact",
+        "path": "./snippets/snippets.json"
       }
     ]
-  }
+  },
+  "contributors": [
+    {
+      "name": "Israel Laguan, <https://github.com/Israel-Laguan>",
+      "email": "israellaguan@gmail.com",
+      "url": "https://israel-laguan.github.io/"
+    }
+  ]
 }

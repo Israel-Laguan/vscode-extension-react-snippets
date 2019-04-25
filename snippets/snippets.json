@@ -1,6 +1,6 @@
 {
   "Initial function component for React": {
-    "scope": "javascript",
+    "scope": "javascript,javascriptreact",
     "prefix": "rfc",
     "body": [
       "import React from 'react'",
@@ -17,9 +17,8 @@
     ],
     "description": "Initial function component file for React"
   },
-
   "Initial arrow function component for React": {
-    "scope": "javascript",
+    "scope": "javascript,javascriptreact",
     "prefix": "rafc",
     "body": [
       "import React from 'react'",
@@ -32,11 +31,10 @@
       "",
       "export default ${1:Component}"
     ],
-    "description": "Initial arrow function component file for React"
+    "description": "Initial arrow function component file for React JUST PRESENTATIONAL"
   },
-
   "Initial function component with useState for React": {
-    "scope": "javascript",
+    "scope": "javascript,javascriptreact",
     "prefix": "rfcs",
     "body": [
       "import React, { useState } from 'react'",
@@ -56,9 +54,8 @@
     ],
     "description": "Initial function component file with useState for React"
   },
-
   "Initial arrow function component with useState for React": {
-    "scope": "javascript",
+    "scope": "javascript,javascriptreact",
     "prefix": "rafcs",
     "body": [
       "import React, { useState } from 'react'",
@@ -78,7 +75,6 @@
     ],
     "description": "Initial arrow function component file with useState for React"
   },
-
   "Initial styled-components for React": {
     "scope": "javascript",
     "prefix": "rsc",
@@ -91,7 +87,6 @@
     ],
     "description": "Initial styled-components file for React"
   },
-
   "Initial function component for React Native": {
     "scope": "javascript",
     "prefix": "rnfc",
@@ -111,7 +106,6 @@
     ],
     "description": "Initial function component file for React Native"
   },
-
   "Initial arrow function component for React Native": {
     "scope": "javascript",
     "prefix": "rnafc",
@@ -129,7 +123,6 @@
     ],
     "description": "Initial arrow function component file for React Native"
   },
-
   "Initial function component with useState for React Native": {
     "scope": "javascript",
     "prefix": "rnfcs",
@@ -152,7 +145,6 @@
     ],
     "description": "Initial function component file with useState for React Native"
   },
-
   "Initial arrow function component with useState for React Native": {
     "scope": "javascript",
     "prefix": "rnafcs",
@@ -175,7 +167,6 @@
     ],
     "description": "Initial arrow function component file with useState for React Native"
   },
-
   "Initial styled-components for React Native": {
     "scope": "javascript",
     "prefix": "rnsc",
@@ -187,5 +178,134 @@
       "`"
     ],
     "description": "Initial styled-components file for React Native"
+  },
+  "destructProps": {
+    "scope": "javascript,javascriptreact",
+    "prefix": "cp",
+    "body": [
+      "const { $1 } = this.props"
+    ],
+    "description": "Creates and assigns a local variable using props destructing inside a Class Component"
+  },
+  "destructState": {
+    "scope": "javascript,javascriptreact",
+    "prefix": "cs",
+    "body": [
+      "const { $1 } = this.state"
+    ],
+    "description": "Creates and assigns a local variable using state destructing inside a Class Component"
+  },
+  "useState": {
+    "scope": "javascript,javascriptreact",
+    "prefix": "useState",
+    "body": [
+      "const [${1:state}, set${1/(.*)/${1:/capitalize}/}] = useState(${2:initialState})"
+    ]
+  },
+  "useEffect": {
+    "scope": "javascript,javascriptreact",
+    "prefix": "useEffect",
+    "body": [
+      "useEffect(() => {",
+      "  ${1:effect}",
+      "  return () => {",
+      "    ${3:cleanup}",
+      "  }",
+      "},[${2:input}])"
+    ]
+  },
+  "useContext": {
+    "scope": "javascript,javascriptreact",
+    "prefix": "useContext",
+    "body": [
+      "const ${1:context} = useContext(${2:contextValue})"
+    ]
+  },
+  "useReducer": {
+    "scope": "javascript,javascriptreact",
+    "prefix": "useReducer",
+    "body": [
+      "const [state, dispatch] = useReducer(${1:reducer}, ${2:initialState}, ${3:init})"
+    ]
+  },
+  "useCallback": {
+    "scope": "javascript,javascriptreact",
+    "prefix": "useCallback",
+    "body": [
+      "useCallback(",
+      "  () => {",
+      "    ${1:callback}",
+      "  },",
+      "  [${2:input}],",
+      ")"
+    ]
+  },
+  "useMemo": {
+    "scope": "javascript,javascriptreact",
+    "prefix": "useMemo",
+    "body": [
+      "useMemo(() => ${1:function}, ${2:input})"
+    ]
+  },
+  "useRef": {
+    "scope": "javascript,javascriptreact",
+    "prefix": "useRef",
+    "body": [
+      "const ${1:ref} = useRef(${2:initialValue})"
+    ]
+  },
+  "useLayoutEffect": {
+    "scope": "javascript,javascriptreact",
+    "prefix": "useLayoutEffect",
+    "body": [
+      "useLayoutEffect(() => {",
+      "  ${1:effect}",
+      "  return () => {",
+      "    ${3:cleanup}",
+      "  }",
+      "},[${2:input}])"
+    ]
+  },
+  "consoleLog": {
+    "scope": "javascript,javascriptreact",
+    "prefix": "clg",
+    "body": "console.log(${1})",
+    "description": "Displays a message in the console"
+  },
+  "consoleError": {
+    "scope": "javascript,javascriptreact",
+    "prefix": "cer",
+    "body": "console.error(${1})",
+    "description": "Displays a message in the console and also includes a stack trace from where the method was called"
+  },
+  "consoleInfo": {
+    "scope": "javascript,javascriptreact",
+    "prefix": "cin",
+    "body": "console.info(${1})",
+    "description": "Displays a message in the console but also displays a blue information icon along with the logged message"
+  },
+  "consoleTrace": {
+    "scope": "javascript,javascriptreact",
+    "prefix": "ctr",
+    "body": "console.trace(${1})",
+    "description": "Prints a stack trace from the point where the method was called"
+  },
+  "consoleTime": {
+    "scope": "javascript,javascriptreact",
+    "prefix": "ctm",
+    "body": "console.time('${1}')",
+    "description": "Console time wrapper"
+  },
+  "consoleTimeEnd": {
+    "scope": "javascript,javascriptreact",
+    "prefix": "cte",
+    "body": "console.timeEnd('${1}')",
+    "description": "Console time end wrapper"
+  },
+  "consoleWarn": {
+    "scope": "javascript,javascriptreact",
+    "prefix": "cwa",
+    "body": "console.warn(${1})",
+    "description": "Displays a message in the console but also displays a yellow warning icon along with the logged message"
   }
 }
