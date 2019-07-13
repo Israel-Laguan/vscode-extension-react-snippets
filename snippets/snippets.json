@@ -1,7 +1,17 @@
 {
+  "ES6 React Import": {
+    "scope": "javascript,javascriptreact",
+    "prefix": "r-import",
+    "body": "import React from 'react'\n"
+  },
+  "ES6 React & Component Import": {
+    "scope": "javascript,javascriptreact",
+    "prefix": "r-importcomponent",
+    "body": "import React, { Component } from 'react'\n"
+  },
   "Initial function component for React": {
     "scope": "javascript,javascriptreact",
-    "prefix": "rfc",
+    "prefix": "rf-export",
     "body": [
       "import React from 'react'",
       "",
@@ -19,7 +29,7 @@
   },
   "Initial arrow function component for React": {
     "scope": "javascript,javascriptreact",
-    "prefix": "rafc",
+    "prefix": "raf-export",
     "body": [
       "import React from 'react'",
       "",
@@ -35,7 +45,7 @@
   },
   "Initial function component with useState for React": {
     "scope": "javascript,javascriptreact",
-    "prefix": "rfcs",
+    "prefix": "rf-usestate",
     "body": [
       "import React, { useState } from 'react'",
       "",
@@ -56,7 +66,7 @@
   },
   "Initial arrow function component with useState for React": {
     "scope": "javascript,javascriptreact",
-    "prefix": "rafcs",
+    "prefix": "raf-usestate",
     "body": [
       "import React, { useState } from 'react'",
       "",
@@ -75,9 +85,24 @@
     ],
     "description": "Initial arrow function component file with useState for React"
   },
+  "Auxiliar arrow function component for React": {
+    "scope": "javascript,javascriptreact",
+    "prefix": "raf-auxiliar",
+    "body": [
+      "const ${1:Component} = () => {",
+      "",
+      "\treturn (",
+      "\t\t<div>",
+      "\t\t\t<h1>${1:Component}</h1>",
+      "\t\t</div>",
+      "\t)",
+      "}"
+    ],
+    "description": "Auxiliar arrow function component for React"
+  },
   "Initial styled-components for React": {
-    "scope": "javascript",
-    "prefix": "rsc",
+    "scope": "javascript,javascriptreact",
+    "prefix": "st-export",
     "body": [
       "import styled from 'styled-components'",
       "\t",
@@ -87,109 +112,82 @@
     ],
     "description": "Initial styled-components file for React"
   },
-  "Initial function component for React Native": {
-    "scope": "javascript",
-    "prefix": "rnfc",
+  "styled-components for React": {
+    "scope": "javascript,javascriptreact",
+    "prefix": "st-component",
     "body": [
-      "import React from 'react'",
-      "import { View, Text } from 'react-native'",
-      "",
-      "function ${1:Component} () {",
-      "\treturn (",
-      "\t\t<View>",
-      "\t\t\t<Text>${1:Component}</Text>",
-      "\t\t</View>",
-      "\t)",
-      "}",
-      "",
-      "export default ${1:Component}"
-    ],
-    "description": "Initial function component file for React Native"
-  },
-  "Initial arrow function component for React Native": {
-    "scope": "javascript",
-    "prefix": "rnafc",
-    "body": [
-      "import React from 'react'",
-      "import { View, Text } from 'react-native'",
-      "",
-      "const ${1:Component} = () => (",
-      "\t<View>",
-      "\t\t<Text>${1:Component}</Text>",
-      "\t</View>",
-      ")",
-      "",
-      "export default ${1:Component}"
-    ],
-    "description": "Initial arrow function component file for React Native"
-  },
-  "Initial function component with useState for React Native": {
-    "scope": "javascript",
-    "prefix": "rnfcs",
-    "body": [
-      "import React, { useState } from 'react'",
-      "import { View, Text } from 'react-native'",
-      "",
-      "function ${1:Component} () {",
-      "\tconst [${2:state}, set${2:state}] = useState('${2:state}')",
-      "",
-      "\treturn (",
-      "\t\t<View>",
-      "\t\t\t<Text>${1:Component}</Text>",
-      "\t\t\t<Text>{${2:state}}</Text>",
-      "\t\t</View>",
-      "\t)",
-      "}",
-      "",
-      "export default ${1:Component}"
-    ],
-    "description": "Initial function component file with useState for React Native"
-  },
-  "Initial arrow function component with useState for React Native": {
-    "scope": "javascript",
-    "prefix": "rnafcs",
-    "body": [
-      "import React, { useState } from 'react'",
-      "import { View, Text } from 'react-native'",
-      "",
-      "const ${1:Component} = () => {",
-      "\tconst [${2:state}, set${2:state}] = useState('${2:state}')",
-      "",
-      "\treturn (",
-      "\t\t<View>",
-      "\t\t\t<Text>${1:Component}</Text>",
-      "\t\t\t<Text>{${2:state}}</Text>",
-      "\t\t</View>",
-      "\t)",
-      "}",
-      "",
-      "export default ${1:Component}"
-    ],
-    "description": "Initial arrow function component file with useState for React Native"
-  },
-  "Initial styled-components for React Native": {
-    "scope": "javascript",
-    "prefix": "rnsc",
-    "body": [
-      "import styled from 'styled-components/native'",
-      "",
-      "export const ${1:Container} = styled.${2:View}`",
+      "import styled from 'styled-components'",
+      "\t",
+      "const ${1:Container} = styled.${2:div}`",
       "\t$0",
       "`"
     ],
-    "description": "Initial styled-components file for React Native"
+    "description": "Normal styled-components in React' file"
+  },
+  "Initial Router component for React ": {
+    "scope": "javascript",
+    "prefix": "r-router",
+    "body": [
+      "import React from 'react'",
+      "import {",
+      "\tSwitch,",
+      "\tBrowserRouter,",
+      "\tRoute,",
+      "\tRedirect",
+      "} from 'react-router-dom'\n",
+      "",
+      "const ${1:Router} = () => (",
+      "\t\t<BrowserRouter>",
+      "\t\t\t<Switch>",
+      "\t\t\t\t<Route exact path='/' component={Home} />",
+      "\t\t\t\t<Route path='/${2:other}' component={${2/(.*)/${2:/capitalize}/}} />",
+      "\t\t\t\t<Route component={Page404} />",
+      "\t\t\t\t<Redirect from='*' to='/' />",
+      "\t\t\t</Switch>",
+      "\t\t</BrowserRouter>",
+      ")",
+      "",
+      "export default ${1:Router}"
+    ],
+    "description": "Initial arrow function component file with useState for React"
+  },
+  "reactClassCompoment": {
+    "scope": "javascript",
+    "prefix": "rcc",
+    "body": "import React, { Component } from 'react'\n\nexport default class ${1:componentName} extends Component {\n\trender() {\n\t\treturn (\n\t\t\t<div>\n\t\t\t\t$0\n\t\t\t</div>\n\t\t)\n\t}\n}\n",
+    "description": "Creates a React component class with ES6 module system"
+  },
+  "ES6 react-router Link Import": {
+    "scope": "javascript,javascriptreact",
+    "prefix": "rr-importlink",
+    "body": "import { Link } from 'react-router-dom';\n"
+  },
+  "ES6 react-router NavLink Import": {
+    "scope": "javascript,javascriptreact",
+    "prefix": "rr-importnavlink",
+    "body": "import { NavLink } from 'react-router-dom'\n"
+  },
+  "react-router NavLink": {
+    "scope": "javascript,javascriptreact",
+    "prefix": "rr-navlink",
+    "body": "<NavLink to={${1:path}}>{$anchorText}</NavLink>\n"
+  },
+  "react-router Link": {
+    "scope": "javascript,javascriptreact",
+    "prefix": "rr-link",
+    "body": "<Link to={${1:path}}>{$anchorText}</Link>\n"
   },
   "destructProps": {
-    "scope": "javascript,javascriptreact",
-    "prefix": "cp",
+    "scope": "javascript",
+    "prefix": "r-destructprops",
     "body": [
       "const { $1 } = this.props"
     ],
     "description": "Creates and assigns a local variable using props destructing inside a Class Component"
   },
   "destructState": {
-    "scope": "javascript,javascriptreact",
-    "prefix": "cs",
+    "scope": "javascript",
+    "prefix": "r-destructstate",
     "body": [
       "const { $1 } = this.state"
     ],
@@ -197,14 +195,14 @@
   },
   "useState": {
     "scope": "javascript,javascriptreact",
-    "prefix": "useState",
+    "prefix": "ru-useState",
     "body": [
       "const [${1:state}, set${1/(.*)/${1:/capitalize}/}] = useState(${2:initialState})"
     ]
   },
   "useEffect": {
     "scope": "javascript,javascriptreact",
-    "prefix": "useEffect",
+    "prefix": "ru-useEffect",
     "body": [
       "useEffect(() => {",
       "  ${1:effect}",
@@ -216,21 +214,21 @@
   },
   "useContext": {
     "scope": "javascript,javascriptreact",
-    "prefix": "useContext",
+    "prefix": "ru-useContext",
     "body": [
       "const ${1:context} = useContext(${2:contextValue})"
     ]
   },
   "useReducer": {
     "scope": "javascript,javascriptreact",
-    "prefix": "useReducer",
+    "prefix": "ru-useReducer",
     "body": [
       "const [state, dispatch] = useReducer(${1:reducer}, ${2:initialState}, ${3:init})"
     ]
   },
   "useCallback": {
     "scope": "javascript,javascriptreact",
-    "prefix": "useCallback",
+    "prefix": "ru-useCallback",
     "body": [
       "useCallback(",
       "  () => {",
@@ -242,21 +240,21 @@
   },
   "useMemo": {
     "scope": "javascript,javascriptreact",
-    "prefix": "useMemo",
+    "prefix": "ru-useMemo",
     "body": [
       "useMemo(() => ${1:function}, ${2:input})"
     ]
   },
   "useRef": {
     "scope": "javascript,javascriptreact",
-    "prefix": "useRef",
+    "prefix": "ru-useRef",
     "body": [
       "const ${1:ref} = useRef(${2:initialValue})"
     ]
   },
   "useLayoutEffect": {
     "scope": "javascript,javascriptreact",
-    "prefix": "useLayoutEffect",
+    "prefix": "ru-useLayoutEffect",
     "body": [
       "useLayoutEffect(() => {",
       "  ${1:effect}",
@@ -266,46 +264,145 @@
       "},[${2:input}])"
     ]
   },
+  "ES6 Component Import": {
+    "scope": "javascript,javascriptreact",
+    "prefix": "js-import",
+    "body": "import ${1:componentName} from './components/${1:componentName}'\n"
+  },
+  "throwNewError": {
+    "scope": "javascript,javascriptreact",
+    "prefix": "js-throwerror",
+    "body": "throw new ${1:Error}('${2:message}')${3}",
+    "description": "throw new error"
+  },
+  "constRequirePackage": {
+    "scope": "javascript,javascriptreact",
+    "prefix": "js-require",
+    "body": "const ${2:name} = require('${1:pkg}')${0}",
+    "description": "const require package"
+  },
+  "exportsMember": {
+    "scope": "javascript,javascriptreact",
+    "prefix": "js-exportmember",
+    "body": "exports.${1:member} = ${2:value}",
+    "description": "exports.member"
+  },
+  "moduleExports": {
+    "scope": "javascript,javascriptreact",
+    "prefix": "js-moduleexports",
+    "body": "module.exports = ${1:value}",
+    "description": "module.exports"
+  },
+  "destructObject": {
+    "scope": "javascript,javascriptreact",
+    "prefix": "js-destruct",
+    "body": [
+      "const { $1 } = $2 ;"
+    ],
+    "description": "Creates and assigns a local variable using object destructing"
+  },
+  "ternary": {
+    "scope": "javascript,javascriptreact",
+    "prefix": "js-ternary",
+    "body": "${1:condition} ? ${2:ifTrue} : ${3:ifFalse};",
+    "description": "ternary operator"
+  },
   "consoleLog": {
     "scope": "javascript,javascriptreact",
-    "prefix": "clg",
+    "prefix": "co-log",
     "body": "console.log(${1})",
     "description": "Displays a message in the console"
   },
   "consoleError": {
     "scope": "javascript,javascriptreact",
-    "prefix": "cer",
+    "prefix": "co-error",
     "body": "console.error(${1})",
     "description": "Displays a message in the console and also includes a stack trace from where the method was called"
   },
   "consoleInfo": {
     "scope": "javascript,javascriptreact",
-    "prefix": "cin",
+    "prefix": "co-info",
     "body": "console.info(${1})",
     "description": "Displays a message in the console but also displays a blue information icon along with the logged message"
   },
   "consoleTrace": {
     "scope": "javascript,javascriptreact",
-    "prefix": "ctr",
+    "prefix": "co-trace",
     "body": "console.trace(${1})",
     "description": "Prints a stack trace from the point where the method was called"
   },
   "consoleTime": {
     "scope": "javascript,javascriptreact",
-    "prefix": "ctm",
+    "prefix": "co-time",
     "body": "console.time('${1}')",
     "description": "Console time wrapper"
   },
   "consoleTimeEnd": {
     "scope": "javascript,javascriptreact",
-    "prefix": "cte",
+    "prefix": "co-timeend",
     "body": "console.timeEnd('${1}')",
     "description": "Console time end wrapper"
   },
   "consoleWarn": {
     "scope": "javascript,javascriptreact",
-    "prefix": "cwa",
+    "prefix": "co-warn",
     "body": "console.warn(${1})",
     "description": "Displays a message in the console but also displays a yellow warning icon along with the logged message"
+  },
+  "app.get": {
+    "prefix": "app.get",
+    "body": [
+      "app.get('$1', ${2:(req, res)} => {\n\t${3}\n});"
+    ],
+    "description": "Routes HTTP GET request to the specifed path with the specified callback functions."
+  },
+  "app.patch": {
+    "prefix": "app.patch",
+    "body": [
+      "app.patch('$1', ${2:(req, res)} => {\n\t${3}\n});"
+    ],
+    "description": "Routes HTTP PATCH request to the specifed path with the specified callback functions."
+  },
+  "app.post": {
+    "prefix": "app.post",
+    "body": [
+      "app.post('$1', ${2:(req, res)} => {\n\t${3}\n});"
+    ],
+    "description": "Routes HTTP POST requests to the specified path with the specified callback functions."
+  },
+  "app.path": {
+    "prefix": "app.path",
+    "body": [
+      "app.path();"
+    ],
+    "description": "Returns the canonical path of the app, a string."
+  },
+  "app.put": {
+    "prefix": "app.put",
+    "body": [
+      "app.put('$1', ${2:(req, res)} => {\n\t${3}\n});"
+    ],
+    "description": "Routes HTTP PUT requests to the specified path with the specified callback functions."
+  },
+  "app.delete": {
+    "prefix": "app.delete",
+    "body": [
+      "app.delete('$1', ${2:(req, res)} => {\n\t${3}\n});"
+    ],
+    "description": "Routes HTTP DELETE requests to the specified path with the specified callback functions."
+  },
+  "app.route": {
+    "prefix": "app.route",
+    "body": [
+      "app.route('${1:/}')"
+    ],
+    "description": "Returns an instance of a single route, which you can then use to handle HTTP verbs with optional middleware. Use app.route() to avoid duplicate route names (and thus typo errors)."
+  },
+  "res.send": {
+    "prefix": "res.send",
+    "body": [
+      "res.send($1);"
+    ],
+    "description": "Express RESPONSE object"
   }
 }

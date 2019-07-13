@@ -1,0 +1,87 @@
+{
+    "ES6 Component Import": {
+        "scope": "javascript,javascriptreact",
+        "prefix": "js-import",
+        "body": "import ${1:componentName} from './components/${1:componentName}'\n"
+    },
+    "throwNewError": {
+        "scope": "javascript,javascriptreact",
+        "prefix": "js-throwerror",
+        "body": "throw new ${1:Error}('${2:message}')${3}",
+        "description": "throw new error"
+    },
+    "constRequirePackage": {
+        "scope": "javascript,javascriptreact",
+        "prefix": "js-require",
+        "body": "const ${2:name} = require('${1:pkg}')${0}",
+        "description": "const require package"
+    },
+    "exportsMember": {
+        "scope": "javascript,javascriptreact",
+        "prefix": "js-exportmember",
+        "body": "exports.${1:member} = ${2:value}",
+        "description": "exports.member"
+    },
+    "moduleExports": {
+        "scope": "javascript,javascriptreact",
+        "prefix": "js-moduleexports",
+        "body": "module.exports = ${1:value}",
+        "description": "module.exports"
+    },
+    "destructObject": {
+        "scope": "javascript,javascriptreact",
+        "prefix": "js-destruct",
+        "body": [
+            "const { $1 } = $2 ;"
+        ],
+        "description": "Creates and assigns a local variable using object destructing"
+    },
+    "ternary": {
+        "scope": "javascript,javascriptreact",
+        "prefix": "js-ternary",
+        "body": "${1:condition} ? ${2:ifTrue} : ${3:ifFalse};",
+        "description": "ternary operator"
+    },
+    "consoleLog": {
+        "scope": "javascript,javascriptreact",
+        "prefix": "co-log",
+        "body": "console.log(${1})",
+        "description": "Displays a message in the console"
+    },
+    "consoleError": {
+        "scope": "javascript,javascriptreact",
+        "prefix": "co-error",
+        "body": "console.error(${1})",
+        "description": "Displays a message in the console and also includes a stack trace from where the method was called"
+    },
+    "consoleInfo": {
+        "scope": "javascript,javascriptreact",
+        "prefix": "co-info",
+        "body": "console.info(${1})",
+        "description": "Displays a message in the console but also displays a blue information icon along with the logged message"
+    },
+    "consoleTrace": {
+        "scope": "javascript,javascriptreact",
+        "prefix": "co-trace",
+        "body": "console.trace(${1})",
+        "description": "Prints a stack trace from the point where the method was called"
+    },
+    "consoleTime": {
+        "scope": "javascript,javascriptreact",
+        "prefix": "co-time",
+        "body": "console.time('${1}')",
+        "description": "Console time wrapper"
+    },
+    "consoleTimeEnd": {
+        "scope": "javascript,javascriptreact",
+        "prefix": "co-timeend",
+        "body": "console.timeEnd('${1}')",
+        "description": "Console time end wrapper"
+    },
+    "consoleWarn": {
+        "scope": "javascript,javascriptreact",
+        "prefix": "co-warn",
+        "body": "console.warn(${1})",
+        "description": "Displays a message in the console but also displays a yellow warning icon along with the logged message"
+    }    
+}

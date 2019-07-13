@@ -1,0 +1,58 @@
+{
+    "app.get": {
+        "prefix": "app.get",
+        "body": [
+            "app.get('$1', ${2:(req, res)} => {\n\t${3}\n});"
+        ],
+        "description": "Routes HTTP GET request to the specifed path with the specified callback functions."
+    },
+    "app.patch": {
+        "prefix": "app.patch",
+        "body": [
+            "app.patch('$1', ${2:(req, res)} => {\n\t${3}\n});"
+        ],
+        "description": "Routes HTTP PATCH request to the specifed path with the specified callback functions."
+    },
+    "app.post": {
+        "prefix": "app.post",
+        "body": [
+            "app.post('$1', ${2:(req, res)} => {\n\t${3}\n});"
+        ],
+        "description": "Routes HTTP POST requests to the specified path with the specified callback functions."
+    },
+    "app.path": {
+        "prefix": "app.path",
+        "body": [
+            "app.path();"
+        ],
+        "description": "Returns the canonical path of the app, a string."
+    },
+    "app.put": {
+        "prefix": "app.put",
+        "body": [
+            "app.put('$1', ${2:(req, res)} => {\n\t${3}\n});"
+        ],
+        "description": "Routes HTTP PUT requests to the specified path with the specified callback functions."
+    },
+    "app.delete": {
+        "prefix": "app.delete",
+        "body": [
+            "app.delete('$1', ${2:(req, res)} => {\n\t${3}\n});"
+        ],
+        "description": "Routes HTTP DELETE requests to the specified path with the specified callback functions."
+    },
+    "app.route": {
+        "prefix": "app.route",
+        "body": [
+            "app.route('${1:/}')"
+        ],
+        "description": "Returns an instance of a single route, which you can then use to handle HTTP verbs with optional middleware. Use app.route() to avoid duplicate route names (and thus typo errors)."
+    },
+    "res.send": {
+        "prefix": "res.send",
+        "body": [
+            "res.send($1);"
+        ],
+        "description": "Express RESPONSE object"
+    }
+}

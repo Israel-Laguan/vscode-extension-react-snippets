@@ -1,9 +1,9 @@
 {
-  "name": "vscode-extension-react-snippets",
-  "displayName": "Code snippets - React / React Native / React Hooks / Styled Components",
+  "name": "vscode-extension-react-js-snippets",
+  "displayName": "Snippets - React / React Router / React Hooks / Styled Components",
   "description": "A group of code snippets to improve your coding speed",
-  "version": "1.0.0",
-  "publisher": "dudusotero",
+  "version": "1.1.0",
+  "publisher": "Israel-Laguan",
   "repository": {
     "type": "git",
     "url": "https://github.com/dudusotero/vscode-extension-react-snippets"
