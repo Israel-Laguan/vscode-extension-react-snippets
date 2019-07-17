@@ -15,15 +15,15 @@
     "body": [
       "import React from 'react'",
       "",
-      "function ${1:Component} () {",
+      "function ${1:${TM_FILENAME_BASE}} () {",
       "\treturn (",
       "\t\t<div>",
-      "\t\t\t<h1>${1:Component}</h1>",
+      "\t\t\t<h1>${0}</h1>",
       "\t\t</div>",
       "\t)",
       "}",
       "",
-      "export default ${1:Component}"
+      "export default ${1:${TM_FILENAME_BASE}}"
     ],
     "description": "Initial function component file for React"
   },
@@ -33,13 +33,13 @@
     "body": [
       "import React from 'react'",
       "",
-      "const ${1:Component} = () => (",
+      "const ${1:${TM_FILENAME_BASE}} = () => (",
       "\t<div>",
-      "\t\t<h1>${1:Component}</h1>",
+      "\t\t<h1>${0}</h1>",
       "\t</div>",
       ")",
       "",
-      "export default ${1:Component}"
+      "export default ${1:${TM_FILENAME_BASE}}"
     ],
     "description": "Initial arrow function component file for React JUST PRESENTATIONAL"
   },
@@ -49,18 +49,18 @@
     "body": [
       "import React, { useState } from 'react'",
       "",
-      "function ${1:Component} () {",
+      "function ${1:${TM_FILENAME_BASE}} () {",
       "\tconst [${2:state}, set${2:state}] = useState('${2:state}')",
       "",
       "\treturn (",
       "\t\t<div>",
-      "\t\t\t<h1>${1:Component}</h1>",
+      "\t\t\t<h1>${0}</h1>",
       "\t\t\t<span>{${2:state}}</span>",
       "\t\t</div>",
       "\t)",
       "}",
       "",
-      "export default ${1:Component}"
+      "export default ${1:${TM_FILENAME_BASE}}"
     ],
     "description": "Initial function component file with useState for React"
   },
@@ -70,18 +70,18 @@
     "body": [
       "import React, { useState } from 'react'",
       "",
-      "const ${1:Component} = () => {",
+      "const ${1:${TM_FILENAME_BASE}} = () => {",
       "\tconst [${2:state}, set${2:state}] = useState('${2:state}')",
       "",
       "\treturn (",
       "\t\t<div>",
-      "\t\t\t<h1>${1:Component}</h1>",
+      "\t\t\t<h1>${0}</h1>",
       "\t\t\t<span>{${2:state}}</span>",
       "\t\t</div>",
       "\t)",
       "}",
       "",
-      "export default ${1:Component}"
+      "export default ${1:${TM_FILENAME_BASE}}"
     ],
     "description": "Initial arrow function component file with useState for React"
   },
@@ -154,7 +154,7 @@
   "reactClassCompoment": {
     "scope": "javascript",
     "prefix": "rcc",
-    "body": "import React, { Component } from 'react'\n\nexport default class ${1:componentName} extends Component {\n\trender() {\n\t\treturn (\n\t\t\t<div>\n\t\t\t\t$0\n\t\t\t</div>\n\t\t)\n\t}\n}\n",
+    "body": "import React, { Component } from 'react'\n\nexport default class ${1:{TM_FILENAME_BASE}} extends Component {\n\trender() {\n\t\treturn (\n\t\t\t<div>\n\t\t\t\t$0\n\t\t\t</div>\n\t\t)\n\t}\n}\n",
     "description": "Creates a React component class with ES6 module system"
   },
   "ES6 react-router Link Import": {

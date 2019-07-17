@@ -67,26 +67,26 @@
 	  "description": "Initial function component file with useState for React"
 	},
 	"Initial arrow function component with useState for React": {
-	  "scope": "javascript,javascriptreact",
-	  "prefix": "raf-usestate",
-	  "body": [
-		"import React, { useState } from 'react'",
-		"",
-		"const ${1:Component} = () => {",
-		"\tconst [${2:state}, set${2:state}] = useState('${2:state}')",
-		"",
-		"\treturn (",
-		"\t\t<div>",
-		"\t\t\t<h1>${1:Component}</h1>",
-		"\t\t\t<span>{${2:state}}</span>",
-		"\t\t</div>",
-		"\t)",
-		"}",
-		"",
-		"export default ${1:Component}"
-	  ],
-	  "description": "Initial arrow function component file with useState for React"
-	},
+		"scope": "javascript,javascriptreact",
+		"prefix": "raf-usestate",
+		"body": [
+		  "import React, { useState } from 'react'",
+		  "",
+		  "const ${1:${TM_FILENAME_BASE}} = () => {",
+		  "\tconst [${2:state}, set${2:state}] = useState('${2:state}')",
+		  "",
+		  "\treturn (",
+		  "\t\t<div>",
+		  "\t\t\t<h1>${0}</h1>",
+		  "\t\t\t<span>{${2:state}}</span>",
+		  "\t\t</div>",
+		  "\t)",
+		  "}",
+		  "",
+		  "export default ${1:${TM_FILENAME_BASE}}"
+		],
+		"description": "Initial arrow function component file with useState for React"
+	  },
 	"Auxiliar arrow function component for React": {
 	  "scope": "javascript,javascriptreact",
 	  "prefix": "raf-auxiliar",
